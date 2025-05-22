@@ -1,0 +1,45 @@
+URL: http://localhost:3000/api/poty
+Method: POST
+Headers: 
+  Content-Type: application/json
+Body (raw JSON):
+{
+    "username": "david",
+    "email": "david@wusap.com",
+    "password": "wusap123"
+}
+
+URL: http://localhost:3000/api/poty/login
+Method: POST
+Headers: 
+  Content-Type: application/json
+Body (raw JSON):
+{
+    "email": "david@wusap.com",
+    "password": "wusap123"
+}
+
+URL: http://localhost:3000/api/poty
+Method: GET
+Headers: 
+  Content-Type: application/json
+Body: None required
+
+URL: http://localhost:3000/api/poty/1
+Method: PUT
+Headers: 
+  Content-Type: application/json
+Body (raw JSON):
+{
+    "username": "poty",
+    "email": "poty@wusap.com",
+    "password": "wusap321"
+}
+Note: Replace '1' with the actual ID you want to update
+
+URL: http://localhost:3000/api/poty/1
+Method: DELETE
+Headers: 
+  Content-Type: application/json
+Body: None required
+Note: Replace '1' with the actual ID you want to delete
