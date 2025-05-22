@@ -1,4 +1,5 @@
 const Poty = require('../models/poty.model');
+const jwt = require('jsonwebtoken');
 
 // Create a new user
 exports.create = async (req, res) => {
@@ -60,9 +61,19 @@ exports.login = async (req, res) => {
             });
         }
 
+        // Generate JWT token
+        const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
+            expiresIn: '24h'
+        });
+
         res.send({
             message: "Login successful!",
-            user: user
+            user: {
+                id: user.id,
+                username: user.username,
+                email: user.email
+            },
+            token: token
         });
     } catch (err) {
         res.status(500).send({
