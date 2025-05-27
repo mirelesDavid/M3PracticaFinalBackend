@@ -20,7 +20,7 @@ jobs:
         run: |
           rm -rf node_modules
           rm -rf dist
-          rm -rf build
+          rm -rf build
 
       - name: Inject .env from GitHub secrets
         run: |
