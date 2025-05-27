@@ -15,6 +15,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      
+      - name: Clean before build
+        run: |
+          rm -rf node_modules
+          rm -rf dist
+          rm -rf build
 
       - name: Inject .env from GitHub secrets
         run: |
