@@ -160,8 +160,8 @@ router.put('/:id', verifyToken, potyController.update);
  *     parameters:
  *       - in: path
  *         name: id
- * 
- * 
+ *
+ *
 
 
 
@@ -493,4 +493,4 @@ router.put('/:id', verifyToken, potyController.update);
  */
 router.delete('/:id', verifyToken, potyController.delete);
 
-module.exports = router; 
+module.exports = router;
